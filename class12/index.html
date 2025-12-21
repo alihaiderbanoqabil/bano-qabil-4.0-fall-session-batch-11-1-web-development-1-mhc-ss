@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class 6 of CSS</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            height: 100%;
+        }
+
+        /* body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        body {
+            display: grid;
+            place-content: center;
+        } */
+
+        /* .container {
+            display: flex;
+            height: 200px;
+            flex-wrap: wrap;
+            gap: 1rem 5rem;
+            row-gap: 1rem;
+            column-gap: 5rem;
+            background-color: dodgerblue;
+            padding: 1rem;
+        }
+
+        .container div {
+            background-color: #f1f1f1;
+            color: #000;
+            width: 100px;
+            padding: 10px;
+            text-align: center;
+            font-size: 30px;
+        } */
+
+        .container {
+            display: grid;
+            /* grid-template-columns: 100px 100px 100px; */
+            /* grid-template-columns: auto auto auto; */
+            /* grid-template-columns: repeat(6, 150px);
+            grid-template-columns: repeat(6, auto); */
+            /* grid-template-columns: repeat(4, 1fr) 100px 300px; */
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: 100px 300px 100px;
+            grid-template-rows: 1fr 2fr 3fr;
+            background-color: dodgerblue;
+            padding: 10px;
+        }
+
+        .container div {
+            background-color: #f1f1f1;
+            border: 1px solid black;
+            padding: 10px;
+            font-size: 30px;
+            text-align: center;
+        }
+
+        .item1 {
+            grid-area: header;
+        }
+
+        .item2 {
+            grid-area: menu;
+        }
+
+        .item3 {
+            grid-area: main;
+        }
+
+        .item4 {
+            grid-area: right;
+        }
+
+        .item5 {
+            grid-area: footer;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-areas:
+                'header header header header header header'
+                'menu main main main main right'
+                'footer footer footer footer footer footer';
+            grid-gap: 10px;
+            background-color: #2196F3;
+            padding: 10px;
+        }
+
+        .grid-container>div {
+            background-color: rgba(255, 255, 255, 0.8);
+            text-align: center;
+            padding: 20px 0;
+            font-size: 30px;
+        }
+
+        .item1 {
+            grid-column-start: 2;
+            grid-column-end: 6;
+        }
+
+        .item2 {
+            grid-row-start: 2;
+            grid-row-end: 6;
+        }
+
+        /* @media only all and (max-width: 900px) {
+            .container {
+                background-color: rgb(255, 30, 105);
+            }
+
+            .container div {
+                background-color: #0dd8c7;
+                color: #11c958;
+            }
+        }
+
+
+        @media only all and (max-width: 600px) {
+            .container {
+                background-color: rgb(188, 255, 30);
+            }
+
+            .container div {
+                background-color: #d80dd8;
+                color: #1151c9;
+            }
+        } */
+
+        /* @media only all and (max-width: 800px) and  (min-width: 400px){
+            .container {
+                background-color: rgb(188, 255, 30);
+            }
+
+            .container div {
+                background-color: #d80dd8;
+                color: #1151c9;
+            }
+        } */
+
+        /* @media (400px <=width <=800px) {
+            .container {
+                background-color: rgb(188, 255, 30);
+            }
+
+            .container div {
+                background-color: #d80dd8;
+                color: #1151c9;
+            }
+        } */
+    </style>
+</head>
+
+<body>
+    <h1>Class 6 of CSS</h1>
+    <!-- <div class="container">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+    </div> -->
+
+
+    <div class="grid-container">
+        <div class="item1">Header</div>
+        <div class="item2">Menu</div>
+        <div class="item3">Main</div>
+        <div class="item4">Right</div>
+        <div class="item5">Footer</div>
+    </div>
+
+</body>
+
+</html>
