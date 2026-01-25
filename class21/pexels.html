@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+  <input id="search" placeholder="Search photos..." />
+  <button onclick="searchPhotos()">Search</button>
+
+  <div id="photos"></div>
+
+  <script>
+    const API_KEY = "ICgFIucwECPAsgYi0Gx0u27gk0vH9zpavQqKTxrJQm4L7P7mOBfQ1jIY";
+
+    async function searchPhotos() {
+      const query = document.getElementById("search").value;
+
+      const response = await fetch(
+        `https://api.pexels.com/v1/search?query=${query}&per_page=6`,
+        {
+          headers: {
+            Authorization: API_KEY
+          }
+        }
+      );
+
+      const data = await response.json();
+
+      const photosDiv = document.getElementById("photos");
+      photosDiv.innerHTML = "";
+
+      data.photos.forEach(photo => {
+        const img = document.createElement("img");
+        img.src = photo.src.medium;
+        img.style.margin = "10px";
+        photosDiv.appendChild(img);
+      });
+    }
+  </script>
+</body>
+
+</html>
