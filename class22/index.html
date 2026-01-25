@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class 10 of JS</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+
+        label {
+            display: block;
+            margin-top: 12px;
+            font-weight: bold;
+        }
+
+        input,
+        textarea,
+        select,
+        button {
+            margin-top: 4px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Class 10 of JS</h1>
+    <h1>Class 9 of JS</h1>
+    <div>
+        <input id="search" placeholder="Search photos..." />
+        <button onclick="searchPhotos()">Search</button>
+
+        <div id="photos"></div>
+    </div>
+
+    <div class="box">Box1</div>
+    <div class="box">Box2</div>
+    <div class="box">Box3</div>
+    <div class="box">Box4</div>
+    <div class="box">Box5</div>
+    <div class="box">Box6</div>
+    <div class="box">Box7</div>
+
+    <section class="box">
+        <h1>Hello World</h1>
+        This is section
+    </section>
+
+    <h1>HTML Form – All Input Types</h1>
+
+    <form>
+
+        <!-- Text-based -->
+        <label>Text
+            <input type="text" name="text">
+        </label>
+
+        <label>Password
+            <input type="password" name="password">
+        </label>
+
+        <label>Email
+            <input type="email" name="email">
+        </label>
+
+        <label>Search
+            <input type="search" name="search">
+        </label>
+
+        <label>URL
+            <input type="url" name="url">
+        </label>
+
+        <label>Telephone
+            <input type="tel" name="tel">
+        </label>
+
+        <!-- Numbers & ranges -->
+        <label>Number
+            <input type="number" name="number">
+        </label>
+
+        <label>Range
+            <input type="range" name="range">
+        </label>
+
+        <!-- Dates & time -->
+        <label>Date
+            <input type="date" name="date">
+        </label>
+
+        <label>Time
+            <input type="time" name="time">
+        </label>
+
+        <label>Datetime-local
+            <input type="datetime-local" name="datetime">
+        </label>
+
+        <label>Month
+            <input type="month" name="month">
+        </label>
+
+        <label>Week
+            <input type="week" name="week">
+        </label>
+
+        <!-- Choices -->
+        <label>
+            <input type="checkbox" name="checkbox"> Checkbox
+        </label>
+
+        <label>
+            <input type="radio" name="radio" value="option1"> Radio Option 1
+        </label>
+        <label>
+            <input type="radio" name="radio" value="option2"> Radio Option 2
+        </label>
+
+        <!-- File & color -->
+        <label>File Upload
+            <input type="file" name="file" required>
+        </label>
+
+        <label>Color
+            <input type="color" name="color">
+        </label>
+
+        <!-- Hidden -->
+        <input type="hidden" name="hidden" value="hiddenValue">
+
+        <!-- Buttons -->
+        <label>Button
+            <input type="button" value="Click Me">
+        </label>
+
+        <label>Reset
+            <input type="reset">
+        </label>
+
+        <label>Submit
+            <input type="submit">
+        </label>
+
+        <!-- Textarea -->
+        <label>Textarea
+            <textarea name="textarea" rows="4" cols="40"></textarea>
+        </label>
+
+        <!-- Select -->
+        <label>Select
+            <select name="select">
+                <option value="">Choose an option</option>
+                <option value="1">Option One</option>
+                <option value="2">Option Two</option>
+            </select>
+        </label>
+
+    </form>
+
+
+    <script>
+        // console.log(document.getElementsByTagName("h1"));
+        console.log(document.getElementById("search"));
+        console.log(document.getElementsByTagName("H1"));
+        console.log(document.getElementsByClassName("box"));
+        console.log(document.getElementsByName("radio"));
+        console.log(document.getElementsByName("tel"));
+
+        console.log(document.querySelector("h1"));
+        console.log(document.querySelector("div"));
+        console.log(document.querySelector("section h1"));
+        console.log(document.querySelector("#search"));
+        console.log(document.querySelector("#photos"));
+        console.log(document.querySelector(".box"));
+        console.log(document.querySelectorAll(".box"));
+        console.log(document.querySelector('[type="email"]'));
+        console.log(document.querySelector('input[required]'));
+
+
+
+
+    </script>
+    <!-- <script src="script.js"></script> -->
+</body>
+
+</html>
